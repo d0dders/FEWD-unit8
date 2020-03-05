@@ -421,4 +421,8 @@ header img {
   border: 1px solid grey;
   background-color: lightyellow;
 }
+
+.avatar {
+  border-radius: 50%;
+}
 /*# sourceMappingURL=styles.css.map */
