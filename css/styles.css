@@ -398,18 +398,19 @@ header {
 body {
   max-width: 1380px;
   margin: auto;
+  padding: 20px;
 }
 
 .grid-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  -ms-grid-columns: (minmax(380px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
   grid-gap: 20px;
 }
 
 header {
-  padding: 20px;
+  padding: 0 20px 20px 20px;
 }
 
 header img {
@@ -420,9 +421,19 @@ header img {
 .card {
   border: 1px solid grey;
   background-color: lightyellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+  overflow: hidden;
 }
 
 .avatar {
   border-radius: 50%;
+  margin-right: 15px;
+}
+
+.text-container p {
+  font-size: .9em;
 }
 /*# sourceMappingURL=styles.css.map */

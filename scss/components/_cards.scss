@@ -1,8 +1,17 @@
 .card {
     border: 1px solid grey;
     background-color: lightyellow;
+    display: flex;
+    padding: 15px;
+    overflow:hidden;
+    
 }
 
 .avatar {
     border-radius: 50%;
+    margin-right: 15px;
+}
+
+.text-container p {
+    font-size: .9em;
 }
