@@ -73,4 +73,10 @@ gridContainer.addEventListener('click', e => {
 modalClose.addEventListener('click', () => {
     overlay.classList.add("hidden");
 });
-    
+
+//search
+const search = document.querySelector('#search');
+
+search.addEventListener('keyup', () => {
+
+});
