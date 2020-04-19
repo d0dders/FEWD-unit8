@@ -20,6 +20,10 @@ body {
     border: 1px solid #778;
     border-radius: 5px;
     padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ 
 }
 
 .modal-close {
@@ -27,6 +31,13 @@ body {
     right: 15px;
     top: 5px;
     cursor: pointer;
+}
+
+.modal-previous,
+.modal-next {
+    height: fit-content;
+    cursor: pointer;
+    
 }
 
 .hidden {

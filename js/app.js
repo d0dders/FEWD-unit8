@@ -1,10 +1,14 @@
 // global variables
 let employees = [];
-const urlAPI = `https://randomuser.me/api/?results=12&inc=name, picture, email, location, phone, dob &noinfo &nat=US`
+let index = 0;
+const results = 12;
+const urlAPI = `https://randomuser.me/api/?results=${results}&inc=name, picture, email, location, phone, dob &noinfo &nat=US`
 const gridContainer = document.querySelector(".grid-container");
 const overlay = document.querySelector(".overlay");
 const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
+const modalPrevious = document.querySelector(".modal-previous");
+const modalNext = document.querySelector(".modal-next");
 
 // fetch data from API
 fetch(urlAPI)
@@ -65,13 +69,27 @@ gridContainer.addEventListener('click', e => {
     if (e.target !== gridContainer) {
         // select the card element based on its proximity to actual element clicked
         const card = e.target.closest(".card");
-        const index = card.getAttribute('data-index');
+        index = card.getAttribute('data-index');
         displayModal(index);
     }
 });
 
 modalClose.addEventListener('click', () => {
     overlay.classList.add("hidden");
+});
+
+modalPrevious.addEventListener('click', () => {
+    if(index >= 1){
+        index--;
+        displayModal(index);
+    }
+});
+
+modalNext.addEventListener('click', () => {
+    if(index < results - 1){
+        index++;
+        displayModal(index);
+    }
 });
 
 //search
